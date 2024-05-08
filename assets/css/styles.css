@@ -101,7 +101,7 @@ a {
 
 .hero {
     display: flex;
-    margin-top: 60px;
+    padding: 60px 0 88px;
     /* align-items: center;
     flex-wrap: wrap; */
     justify-content: space-between;
@@ -143,17 +143,6 @@ a {
     background: #fff;
 }
 
-/* .hero__play-half-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 4px solid var(--primary-color);
-    border-radius: 50%;
-    width: 57px;
-    height: 59px;
-    transition: 0.3s;
-} */
-
 .hero__play-icon {
     display: flex;
     align-items: center;
@@ -163,6 +152,19 @@ a {
     color: #fff;
     background: #83a17d;
     border-radius: 50%;
+}
+
+.hero__play-icon::before {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 53px;
+    height: 53px;
+    border-radius: 50%;
+    border: 4px solid #143c3c;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    rotate: 45deg;
 }
 
 .hero__play-btn span {
@@ -222,5 +224,63 @@ a {
 }
 
 .hero__img:nth-child(2) {
-    margin-top: 77px;
+    align-self: flex-end;
+    filter: drop-shadow(0 0 100px #4dbb9a);
+    overflow: hidden;
+    z-index: -1;
+}
+
+.hero__img:nth-last-of-type() {
+    border-radius: 340px;
+    background: #4dbb9a;
+
+    filter: blur(137px);
+}
+
+/* Clients */
+.clients {
+    padding: 42px 0;
+}
+
+.clients__rows {
+    display: flex;
+    padding: 76px 122px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background: #e2eddf;
+    border-radius: 100px;
+}
+
+.clients__images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clients__gg {
+    color: var(--Primary-color);
+    font-size: 3.1rem;
+    font-weight: 500;
+}
+
+.client__slack {
+    margin-left: 5px;
+    color: var(--Primary-color);
+    font-size: 3.2rem;
+    font-weight: 600;
+}
+
+.client__agworld {
+    margin-left: 11px;
+    color: #163c35;
+    font-size: 2.6rem;
+    font-weight: 400;
+}
+
+.clients__heroku {
+    margin-left: 14px;
+    color: var(--Primary-color);
+    font-size: 1.9rem;
+    font-weight: 600;
 }
